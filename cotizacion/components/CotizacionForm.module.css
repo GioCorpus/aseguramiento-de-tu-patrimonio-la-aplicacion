@@ -1,0 +1,333 @@
+/* CotizacionForm.module.css */
+
+/* ─── Wrapper ─────────────────────────────────────────────────── */
+.wrapper {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+  font-family: var(--font-sans, system-ui, sans-serif);
+}
+
+/* ─── Header ──────────────────────────────────────────────────── */
+.header {
+  padding: 1.75rem 0 1.25rem;
+}
+
+.eyebrow {
+  font-size: 11px;
+  color: var(--color-text-secondary, #666);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.3rem;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--color-text-primary, #111);
+  margin: 0 0 0.25rem;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--color-text-secondary, #666);
+  margin: 0 0 1.25rem;
+}
+
+/* ─── Progress bar ────────────────────────────────────────────── */
+.progressBar {
+  height: 3px;
+  background: var(--color-background-secondary, #f0f0f0);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: #1D9E75;
+  border-radius: 2px;
+  transition: width 0.35s ease;
+}
+
+/* ─── Card sections ───────────────────────────────────────────── */
+.card {
+  background: var(--color-background-primary, #fff);
+  border: 0.5px solid var(--color-border-tertiary, rgba(0,0,0,.12));
+  border-radius: 12px;
+  padding: 1.25rem 1.25rem 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.stepEyebrow {
+  font-size: 11px;
+  color: var(--color-text-secondary, #888);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 1.1rem;
+}
+
+/* ─── Field groups ────────────────────────────────────────────── */
+.fieldGroup {
+  margin-bottom: 1.25rem;
+}
+
+.fieldLabel {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-secondary, #555);
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.requiredDot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #D85A30;
+  flex-shrink: 0;
+}
+
+.ageBadge {
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 8px;
+  background: #E1F5EE;
+  color: #0F6E56;
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+.fieldHint {
+  font-size: 12px;
+  color: var(--color-text-tertiary, #999);
+  margin: 4px 0 0;
+}
+
+.errorMsg {
+  font-size: 12px;
+  color: #D85A30;
+  margin: 4px 0 0;
+}
+
+/* ─── Field error state ───────────────────────────────────────── */
+.fieldError .input,
+.fieldError .textarea {
+  border-color: #D85A30 !important;
+}
+
+/* ─── Inputs ──────────────────────────────────────────────────── */
+.input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 36px;
+  padding: 0 10px;
+  font-size: 14px;
+  font-family: inherit;
+  border: 0.5px solid var(--color-border-secondary, rgba(0,0,0,.2));
+  border-radius: 8px;
+  background: var(--color-background-primary, #fff);
+  color: var(--color-text-primary, #111);
+  transition: border-color 0.15s, box-shadow 0.15s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #1D9E75;
+  box-shadow: 0 0 0 2px rgba(29, 158, 117, 0.18);
+}
+
+.textarea {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 96px;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: inherit;
+  line-height: 1.5;
+  border: 0.5px solid var(--color-border-secondary, rgba(0,0,0,.2));
+  border-radius: 8px;
+  background: var(--color-background-primary, #fff);
+  color: var(--color-text-primary, #111);
+  resize: vertical;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: #1D9E75;
+  box-shadow: 0 0 0 2px rgba(29, 158, 117, 0.18);
+}
+
+.charCount {
+  font-size: 12px;
+  color: var(--color-text-tertiary, #aaa);
+  text-align: right;
+  margin: 4px 0 0;
+}
+
+/* ─── Gender selector ─────────────────────────────────────────── */
+.genderGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.genderOption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 0.5px solid var(--color-border-secondary, rgba(0,0,0,.2));
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--color-background-primary, #fff);
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.genderOption input[type='radio'] {
+  accent-color: #1D9E75;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.genderSelected {
+  border: 1.5px solid #1D9E75;
+}
+
+.genderLabel {
+  font-size: 14px;
+  color: var(--color-text-primary, #111);
+}
+
+/* ─── Postal code row ─────────────────────────────────────────── */
+.cpRow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: end;
+  margin-bottom: 1.25rem;
+}
+
+.cpRow > .fieldGroup {
+  margin-bottom: 0;
+}
+
+.cpBadge {
+  font-size: 12px;
+  color: var(--color-text-secondary, #666);
+  background: var(--color-background-secondary, #f5f5f5);
+  border-radius: 8px;
+  padding: 8px 10px;
+  white-space: nowrap;
+  line-height: 1.4;
+  margin-bottom: 1.25rem;
+}
+
+/* ─── Footer ──────────────────────────────────────────────────── */
+.footer {
+  padding-top: 0.25rem;
+}
+
+/* ─── Summary card ────────────────────────────────────────────── */
+.summaryCard {
+  background: var(--color-background-primary, #fff);
+  border: 0.5px solid var(--color-border-tertiary, rgba(0,0,0,.12));
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.summaryTitle {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-secondary, #666);
+  margin: 0 0 0.75rem;
+}
+
+.summaryList {
+  margin: 0;
+  padding: 0;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 5px 0;
+  border: none;
+}
+
+.summaryKey {
+  font-size: 13px;
+  color: var(--color-text-secondary, #666);
+  flex-shrink: 0;
+}
+
+.summaryVal {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-primary, #111);
+  text-align: right;
+  word-break: break-word;
+  max-width: 60%;
+  margin: 0;
+}
+
+/* ─── CTA button ──────────────────────────────────────────────── */
+.ctaBtn {
+  width: 100%;
+  padding: 11px 0;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: inherit;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #1D9E75;
+  color: #fff;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+.ctaBtn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.ctaBtn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.ctaBtn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ─── Legal footnote ──────────────────────────────────────────── */
+.legal {
+  font-size: 12px;
+  color: var(--color-text-tertiary, #aaa);
+  text-align: center;
+  margin-top: 0.75rem;
+}
+
+/* ─── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 400px) {
+  .genderGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cpRow {
+    grid-template-columns: 1fr;
+  }
+
+  .cpBadge {
+    display: none;
+  }
+}
